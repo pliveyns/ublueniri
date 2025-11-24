@@ -42,3 +42,6 @@ dnf5 -y copr disable ublue-os/packages
 #### Example for enabling a System Unit File
 
 #systemctl enable podman.socket
+
+rm -rf /var/*
+rm -rf /usr/etc
