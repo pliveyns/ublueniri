@@ -43,4 +43,3 @@ dnf5 -y copr disable ublue-os/packages
 #systemctl enable podman.socket
 
 rm -rf /var/*
-rm -rf /usr/etc
