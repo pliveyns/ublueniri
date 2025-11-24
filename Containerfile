@@ -8,11 +8,11 @@ FROM quay.io/fedora/fedora-bootc:43
 ### MODIFICATIONS
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
-    --mount=type=cache,dst=/var/cache \
-    --mount=type=cache,dst=/var/log \
+    --mount=type=tmpfs,dst=/var \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh
     
 ### LINTING
 ## Verify final image and contents are correct.
-RUN rm -rf /var/* /usr/etc/ && bootc container lint
+RUN rm -rf /var/* && bootc container lint
+
