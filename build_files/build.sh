@@ -14,7 +14,7 @@ dnf install -y 'dnf5-command(config-manager)'
 
 # this installs a package from fedora repos
 #dnf5 install -y tmux
-#dnf5 install -y langpacks-en_GB \
+dnf5 install -y langpacks-en_GB
 #  distrobox \
 #  alacritty \
 #  kitty \
