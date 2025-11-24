@@ -10,19 +10,19 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # Enable use of copr repos
-dnf install -y 'dnf5-command(config-manager)'
+#dnf install -y 'dnf5-command(config-manager)'
 
 # this installs a package from fedora repos
 #dnf5 install -y tmux
-dnf5 install -y langpacks-en_GB \
-  distrobox \
-  alacritty \
-  kitty \
-  kitty-terminfo \
-  syncthing \
-  fzf \
-  just \
-  powerstat
+#dnf5 install -y langpacks-en_GB \
+#  distrobox \
+#  alacritty \
+#  kitty \
+#  kitty-terminfo \
+#  syncthing \
+#  fzf \
+#  just \
+#  powerstat
 
 # Use a COPR Example:
 #
