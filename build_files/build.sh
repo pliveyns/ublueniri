@@ -17,8 +17,8 @@ dnf install -y 'dnf5-command(config-manager)'
 dnf5 install -y langpacks-en_GB \
   distrobox \
   alacritty \
-  kitty
-#  kitty-terminfo \
+  kitty \
+  kitty-terminfo
 #  syncthing \
 #  fzf \
 #  just \
