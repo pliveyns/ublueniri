@@ -15,4 +15,4 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     
 ### LINTING
 ## Verify final image and contents are correct.
-RUN rm -rf /var/* && bootc container lint
+RUN rm -rf /var/* /usr/etc/ && bootc container lint
