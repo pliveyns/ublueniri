@@ -31,7 +31,8 @@ dnf install -y langpacks-en_GB \
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 dnf copr enable -y ublue-os/packages
-dnf install -y uupd \
+dnf install -y \
+  uupd \
   ublue-setup-services \
   ublue-os-udev-rules \
   ublue-os-luks \
@@ -39,19 +40,27 @@ dnf install -y uupd \
 dnf copr disable -y ublue-os/packages
 
 dnf copr enable -y yalter/niri-git
-dnf copr enable -y avengemedia/dms-git
+dnf --enablerepo copr:copr.fedorainfracloud.org:yalter:niri-git install -y \
+  niri
+dnf copr disable -y yalter/niri-git
+
 dnf copr enable -y avengemedia/danklinux
-dnf install -y libdisplay-info \
-  libseat \
-  xwayland-satellite \
-  niri \
+dnf --enablerepo copr:copr.fedorainfracloud.org:avengemedia:danklinux install -y \
+  quickshell-git
+dnf copr disable -y avengemedia/danklinux
+
+dnf copr enable -y avengemedia/dms-git
+dnf --enablerepo copr:copr.fedorainfracloud.org:avengemedia:dms-git install -y \
   dms \
   dms-cli \
   dms-greeter \
   dgop
-dnf copr disable -y yalter/niri-git
 dnf copr disable -y avengemedia/dms-git
-dnf copr disable -y avengemedia/danklinux
+
+dnf install -y \
+  xwayland-satellite \
+  libseat \
+  libdisplay-info
 
 #### Example for enabling a System Unit File
 
