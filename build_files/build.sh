@@ -31,11 +31,11 @@ dnf5 install -y langpacks-en_GB \
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 dnf5 -y copr enable ublue-os/packages
-dnf5 -y install uupd
-#  ublue-setup-services \
-#  ublue-os-udev-rules \
-#  ublue-os-luks \
-#  ublue-os-just
+dnf5 -y install uupd \
+  ublue-setup-services \
+  ublue-os-udev-rules \
+  ublue-os-luks \
+  ublue-os-just
 dnf5 -y copr disable ublue-os/packages
 
 #### Example for enabling a System Unit File
