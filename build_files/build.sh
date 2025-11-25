@@ -18,9 +18,9 @@ dnf5 install -y langpacks-en_GB \
   distrobox \
   alacritty \
   kitty \
-  kitty-terminfo
-#  syncthing \
-#  fzf \
+  kitty-terminfo \
+  syncthing \
+  fzf
 #  just \
 #  powerstat
 
