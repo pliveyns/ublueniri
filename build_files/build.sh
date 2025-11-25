@@ -62,6 +62,10 @@ dnf install -y \
   libseat \
   libdisplay-info
 
+useradd -r -d /var/lib/greeter -s /bin/bash -c "System Greeter" greeter
+mkdir /var/lib/greeter
+chown greeter:greeter /var/lib/greeter
+
 #### Example for enabling a System Unit File
 
 #systemctl enable podman.socket
