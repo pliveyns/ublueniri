@@ -20,9 +20,9 @@ dnf5 install -y langpacks-en_GB \
   kitty \
   kitty-terminfo \
   syncthing \
-  fzf
-#  just \
-#  powerstat
+  fzf \
+  just \
+  powerstat
 
 # Use a COPR Example:
 #
