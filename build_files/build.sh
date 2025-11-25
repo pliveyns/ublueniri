@@ -40,6 +40,7 @@ dnf install -y \
 dnf copr disable -y ublue-os/packages
 
 dnf copr enable -y yalter/niri-git
+echo "priority=1" | tee -a /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:yalter:niri-git.repo
 dnf --enablerepo copr:copr.fedorainfracloud.org:yalter:niri-git install -y \
   niri
 dnf copr disable -y yalter/niri-git
@@ -61,10 +62,6 @@ dnf install -y \
   xwayland-satellite \
   libseat \
   libdisplay-info
-
-useradd -r -d /var/lib/greeter -s /bin/bash -c "System Greeter" greeter
-mkdir /var/lib/greeter
-chown greeter:greeter /var/lib/greeter
 
 #### Example for enabling a System Unit File
 
