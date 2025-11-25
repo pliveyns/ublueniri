@@ -34,6 +34,7 @@ dnf5 -y copr enable ublue-os/packages
 dnf5 -y install uupd \
   ublue-setup-services \
   ublue-os-udev-rules \
+  ublue-os-signing \
   ublue-os-luks \
   ublue-os-just
 dnf5 -y copr disable ublue-os/packages
